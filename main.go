@@ -36,13 +36,13 @@ const maxSnaplen uint32 = 262144
 var previousTimestamp int64
 
 func main() {
-	err := joincap(os.Args)
+	err := Joincap(os.Args)
 	if err != nil {
 		log.Println(err)
 	}
 }
 
-func joincap(args []string) error {
+func Joincap(args []string) error {
 	log.SetOutput(os.Stderr)
 
 	var cmdFlags struct {
